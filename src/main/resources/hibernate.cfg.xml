@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/wallet_db?useSSL=false</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">10</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+
+        <!-- Names the annotated entity class -->
+        <mapping class="com.wallet.dbaccess.models.WalletStatusTypeModel"/>
+        <mapping class="com.wallet.dbaccess.models.WalletTypeModel"/>
+        <mapping class="com.wallet.dbaccess.models.WalletModel"/>
+        <mapping class="com.wallet.dbaccess.models.TransactionStatusTypeModel"/>
+        <mapping class="com.wallet.dbaccess.models.TransactionTypeModel"/>
+        <mapping class="com.wallet.dbaccess.models.TransactionModel"/>
+
+    </session-factory>
+
+</hibernate-configuration>
