@@ -1,6 +1,6 @@
 # 💰 Simple Wallet Service 💻
 
-![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
+![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg) 
 
 Wallet which will allow credit, debit of amount and cancellation of debit/credit transactions and shows current balance.
 
@@ -22,5 +22,11 @@ Run project from generated `jar` file using below command
 ```shell
 java -cp target/wallet-service-1.0.0-SNAPSHOT-jar-with-dependencies.jar com.wallet.WalletService
 ```
+
+## API
+
+Download Postman collection for API
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/462b92ee5bb69bdfbf24)
 
 *This project is licensed under the terms of the MIT license.*
