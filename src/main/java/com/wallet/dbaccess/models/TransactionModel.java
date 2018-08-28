@@ -323,7 +323,8 @@ public class TransactionModel extends BaseDbModel
         LOGGER.info("Fetching transactions for walletId - " + walletId);
         String queryString = 
             "from TransactionModel where " + 
-                "walletId = :walletId and isDeleted = 0";
+                "walletId = :walletId and isDeleted = 0 " +
+                "order by creationDate desc";
         
         Map<String, Object> queryParams = new HashMap<>();
         queryParams.put("walletId", walletId);
